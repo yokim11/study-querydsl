@@ -8,13 +8,15 @@ import javax.persistence.PersistenceContext;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 import study.querydsl.entity.Hello;
 import study.querydsl.entity.QHello;
 
 @Transactional
 @SpringBootTest
-class StudyQuerydslApplicationTests {
+@Commit
+class QuerydslApplicationTests {
 
     @PersistenceContext
     EntityManager em;
